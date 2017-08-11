@@ -1,4 +1,6 @@
-This project uses machine learning to better target disaster relief efforts. I focused on Typhoon Haiyan, which hit the Philippines in November of 2013. It broke records for having the highest wind speeds upon landfall and destroyed over 1 million homes.
+## Targeting disaster relief from space
+
+This project uses machine learning and satellite imagery to better target disaster relief efforts. I focused on Typhoon Haiyan, which hit the Philippines in November of 2013. It broke records for having the highest wind speeds upon landfall and destroyed over 1 million homes.
 
 After natural disasters, it's important to understand which areas suffered the most damage in order to prioritize relief efforts. Often times damage assessment maps are created by volunteers with the Humanitarian Open Street Map team who compare satellite imagery before and after the disaster and manually label each building with their evaluation of damage. However these maps are time and labor intensive to create, and not always accurate.
 
