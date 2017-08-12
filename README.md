@@ -68,6 +68,6 @@ This sort of change detection model has many applications. For example, it could
 In the case of disaster relief as I've written about today, this model enables targeting of limited resources to ensure that structural building assessments, food, water, and other aid are going to the people who need it most.
 
 -----
-Languages: Python, JavaScript  
-Libraries: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn  
-Methods: Deep learning, classification (supervised learning)  
+**Languages**: Python, JavaScript  
+**Libraries**: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn  
+**Methods**: Deep learning, classification (supervised learning)  
