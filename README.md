@@ -16,17 +16,19 @@ Using satellite imagery before and after Typhoon Haiyan in the Philippines, I bu
 
 I used Landsat8 satellite imagery, which is at 15 meter resolution (and available freely through Google Earth Engine). This resolution is much lower than commercially available satellite imagery (which can get up to 30 cm per pixel!), but the success of this model using publicly available data demonstrates its applicability to organizations that may be limited in funding.
 
-![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/satellite.png?raw=true "Pre and post typhoon satellite imagery")
+<p align="center">
+<img src="https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/satellite.png?raw=true" alt="Pre and post typhoon satellite imagery" width="600">
+</p>
 
-Above is an example of satellite imagery pre and post typhoon for Tacloban City, one of the hardest hit areas. On the left, lighter color squares representing buildings are visible.
+Above is an example of satellite imagery pre and post typhoon for Tacloban City, one of the hardest hit areas. On the left, lighter color squares representing buildings are visible. On the right, there is much more grey as these buildings were destroyed.
 
-![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/buildings.png?raw=true "Building damage")
+My ground truth data on building damage came from the Copernicus Emergency Management Service. 
 
-On the right, there is much more grey as these buildings were destroyed.
+<p align="center">
+<img src="https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/buildings.png?raw=true" alt="Building damage" width="300">
+</p>
 
-My ground truth data on building damage came from the Copernicus Emergency Management Service.
-
-An example of my building damage data is shown to the right, with different colors squares indicating different levels of damage. Superimposing these polygons on my satellite imagery, I labeled each pixel in my satellite imagery as either being part of a damaged building or not.
+An example of my building damage data is shown above, with different colors squares indicating different levels of damage. Superimposing these polygons on my satellite imagery, I labeled each pixel in my satellite imagery as either being part of a damaged building or not.
 
 ## Random forest baseline model
 
@@ -44,7 +46,9 @@ When I trained a random forest on the top half of three satellite images and had
 
 One reason why the model struggles to generalize may be that satellite images can be taken at different times of day and therefore can have different lighting (note the differences below) — meaning that the thresholds identified in one model may not apply to other imagery.
 
-![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/light_diffs.png?raw=true "Satellite imagery comparison")
+<p align="center">
+<img src="https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/light_diffs.png?raw=true" alt="Satellite imagery comparison">
+</p>
 
 ## A superior U-Net model
 
