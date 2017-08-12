@@ -16,11 +16,11 @@ Using satellite imagery before and after Typhoon Haiyan in the Philippines, I bu
 
 I used Landsat8 satellite imagery, which is at 15 meter resolution (and available freely through Google Earth Engine). This resolution is much lower than commercially available satellite imagery (which can get up to 30 cm per pixel!), but the success of this model using publicly available data demonstrates its applicability to organizations that may be limited in funding.
 
-satellite
+![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/satellite.png?raw=true "Pre and post typhoon satellite imagery")
 
 Above is an example of satellite imagery pre and post typhoon for Tacloban City, one of the hardest hit areas. On the left, lighter color squares representing buildings are visible.
 
-buildings.png
+![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/buildings.png?raw=true "Building damage")
 
 On the right, there is much more grey as these buildings were destroyed.
 
@@ -40,10 +40,11 @@ To deal with a class imbalance, I trained the model on a balanced sample. This m
 
 When I trained a random forest on the top half of three satellite images and had it predict on the bottom half, it did very well as shown by the ROC curve which is very close to the upper left hand corner. However when I asked the model to predict on an image it hasn't seen before, the ROC curve dropped precipitously. This indicates that the model does a poor job of generalizing. The model is therefore hard to scale as it would be infeasible to train a model on every part of a country after a natural disaster.
 
-random_forest.png
+![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/random_forest.png?raw=true "Random forest ROC curves")
+
 One reason why the model struggles to generalize may be that satellite images can be taken at different times of day and therefore can have different lighting (note the differences below) — meaning that the thresholds identified in one model may not apply to other imagery.
 
-light_diffs.png
+![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/light_diffs.png?raw=true "Satellite imagery comparison")
 
 ## A superior U-Net model
 
@@ -51,13 +52,13 @@ To create a model that is more generalizable, I built a neural net called a U-Ne
 
 This model did quite well with my data. The ROC on the left is for the validation set, which are images the model has seen. On the right is the ROC curve for the holdout set, which are images the model has never seen before. Unlike the random forest, the ROC curve didn't drop significantly. The fact that this model extends well to new images is important as one would want to feed in satellite imagery for an entire country to generate hotspot predictions after a natural disaster.
 
-unet_roc.png
+![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/unet_roc.png?raw=true "U-Net ROC")
 
 ## Mapping the density of damage
 
 The U-Net predictions identify where the damaged buildings are, and from this, I created a density map highlighting the areas with the greatest building damage.
 
-ground_truth_and_prediction.png
+![alt text](https://github.com/ejm714/disaster_relief_from_space/blob/master/imgs/ground_truth_and_prediction.png?raw=true "Ground truth and prediction")
 
 On the left is the post-typhoon satellite imagery. In the middle is the ground truth data with the black marking damaged buildings — this aligns with the grey in the satellite imagery. On the right is a density map of damage based on predictions from the model with the darkest areas being the most damaged areas, and therefore priority areas for relief efforts. As the predictions are on a holdout set, the similarity between ground truth and prediction illustrates the model's ability to scale.
 
