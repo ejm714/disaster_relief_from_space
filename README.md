@@ -66,3 +66,8 @@ On the left is the post-typhoon satellite imagery. In the middle is the ground t
 This sort of change detection model has many applications. For example, it could be used to identify illegal deforestation, monitor rising sea levels caused by global warming, or identify crop loss due to droughts or floods.
 
 In the case of disaster relief as I've written about today, this model enables targeting of limited resources to ensure that structural building assessments, food, water, and other aid are going to the people who need it most.
+
+-----
+Languages: Python, JavaScript  
+Libraries: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn  
+Methods: Deep learning, classification (supervised learning)  
