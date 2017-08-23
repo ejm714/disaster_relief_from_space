@@ -77,4 +77,7 @@ In the case of disaster relief as I've written about today, this model enables t
 **Libraries**: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn  
 **Methods**: Deep learning, classification (supervised learning)  
 
-The data_prep notebook is a precursor to the random forest and unet notebooks (the latter two can be run independently of one another).
+Replication notes:
+- The javascript file pulls the satellite imagery from Google Earth Engine and should be run first.
+- Building data shapefiles (grading maps) can be downloaded manually from the <a href="http://emergency.copernicus.eu/mapping/list-of-components/EMSR058">Copernicus Emergency Management Service website</a>.
+- The data_prep notebook is a precursor to the random forest and unet notebooks. The latter two can be run independently of one another.
