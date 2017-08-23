@@ -76,3 +76,5 @@ In the case of disaster relief as I've written about today, this model enables t
 **Languages**: Python, JavaScript  
 **Libraries**: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn  
 **Methods**: Deep learning, classification (supervised learning)  
+
+The data_prep notebook is a precursor to the random forest and unet notebooks (the latter two can be run independently of one another).
