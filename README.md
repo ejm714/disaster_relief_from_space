@@ -73,12 +73,12 @@ This sort of change detection model has many applications. For example, it could
 In the case of disaster relief as I've written about today, this model enables targeting of limited resources to ensure that structural building assessments, food, water, and other aid are going to the people who need it most.
 
 -----
-**Languages**: Python, JavaScript
-**Libraries**: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn
-**Methods**: Deep learning, classification (supervised learning)
+**Languages**: Python, JavaScript  
+**Libraries**: Keras + TensorFlow, numpy, pandas, sklearn, rasterio, geopandas, shapely, opencv, matplotlib, seaborn  
+**Methods**: Deep learning, classification (supervised learning)  
 
 Replication notes:
 
-- `google_earth_engine_satellite.js` pulls the satellite imagery from Google Earth Engine and should be run first.
+- `google-earth-engine-satellite.js` pulls the satellite imagery from Google Earth Engine and should be run first.
 - Building data shapefiles (grading maps) can be downloaded manually from the <a href="http://emergency.copernicus.eu/mapping/list-of-components/EMSR058">Copernicus Emergency Management Service website</a>.
-- `0.0-data_prep.ipynb` is a precursor to two modeling notebooks. The latter two can be run independently of one another.
+- `0.0-data-prep.ipynb` is a precursor to two modeling notebooks. The latter two can be run independently of one another.
